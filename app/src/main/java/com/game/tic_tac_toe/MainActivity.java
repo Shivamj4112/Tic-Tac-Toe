@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         box101 = findViewById(R.id.box101);
         box102 = findViewById(R.id.box102);
         box103 = findViewById(R.id.box103);
