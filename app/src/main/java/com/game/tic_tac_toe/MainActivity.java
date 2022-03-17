@@ -1,8 +1,10 @@
 package com.game.tic_tac_toe;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
     ImageView box201, box202, box203;
     ImageView box301, box302, box303;
 
-    CardView reset;
-
     List<Integer> cross = new ArrayList<>();
     List<Integer> circle = new ArrayList<>();
 
@@ -27,12 +27,13 @@ public class MainActivity extends AppCompatActivity {
     int x = R.drawable.x;
     int o = R.drawable.o;
 
+    int c1, c2, c3, c4, c5, c6, c7, c8, c9;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        reset = findViewById(R.id.reset);
 
         box101 = findViewById(R.id.box101);
         box102 = findViewById(R.id.box102);
@@ -50,18 +51,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
+                if (c1 == 0) {
+                    c1++;
+                    if (count % 2 == 0) {
 
-                    circle.add(1);
-                    checkcircle();
-                    box101.setImageResource(o);
+                        circle.add(1);
+                        checkcircle();
+                        box101.setImageResource(o);
 
-                } else {
-                    cross.add(1);
-                    checkcross();
-                    box101.setImageResource(x);
+                    } else {
+                        cross.add(1);
+                        checkcross();
+                        box101.setImageResource(x);
+                    }
+                    count++;
                 }
-                count++;
+
             }
         });
 
@@ -69,16 +74,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(2);
-                    checkcircle();
-                    box102.setImageResource(o);
-                } else {
-                    cross.add(2);
-                    checkcross();
-                    box102.setImageResource(x);
+                if (c2 == 0) {
+                    c2++;
+                    if (count % 2 == 0) {
+                        circle.add(2);
+                        checkcircle();
+                        box102.setImageResource(o);
+                    } else {
+                        cross.add(2);
+                        checkcross();
+                        box102.setImageResource(x);
+                    }
+                    count++;
                 }
-                count++;
+
             }
         });
 
@@ -86,16 +95,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(3);
-                    checkcircle();
-                    box103.setImageResource(o);
-                } else {
-                    cross.add(3);
-                    checkcross();
-                    box103.setImageResource(x);
+                if (c3 == 0) {
+                    c3++;
+                    if (count % 2 == 0) {
+                        circle.add(3);
+                        checkcircle();
+                        box103.setImageResource(o);
+                    } else {
+                        cross.add(3);
+                        checkcross();
+                        box103.setImageResource(x);
+                    }
+                    count++;
                 }
-                count++;
+
             }
         });
 
@@ -103,32 +116,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(4);
-                    checkcircle();
-                    box201.setImageResource(o);
-                } else {
-                    cross.add(4);
-                    checkcross();
-                    box201.setImageResource(x);
+                if (c4 == 0) {
+                    c4++;
+                    if (count % 2 == 0) {
+                        circle.add(4);
+                        checkcircle();
+                        box201.setImageResource(o);
+                    } else {
+                        cross.add(4);
+                        checkcross();
+                        box201.setImageResource(x);
+                    }
+                    count++;
                 }
-                count++;
+
             }
         });
         box202.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(5);
-                    checkcircle();
-                    box202.setImageResource(o);
-                } else {
-                    cross.add(5);
-                    checkcross();
-                    box202.setImageResource(x);
+                if (c5 == 0) {
+                    c5++;
+                    if (count % 2 == 0) {
+                        circle.add(5);
+                        checkcircle();
+                        box202.setImageResource(o);
+                    } else {
+                        cross.add(5);
+                        checkcross();
+                        box202.setImageResource(x);
+                    }
+                    count++;
                 }
-                count++;
+
             }
         });
 
@@ -136,16 +157,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(6);
-                    checkcircle();
-                    box203.setImageResource(o);
-                } else {
-                    cross.add(6);
-                    checkcross();
-                    box203.setImageResource(x);
+                if (c6 == 0) {
+                    c6++;
+                    if (count % 2 == 0) {
+                        circle.add(6);
+                        checkcircle();
+                        box203.setImageResource(o);
+                    } else {
+                        cross.add(6);
+                        checkcross();
+                        box203.setImageResource(x);
+                    }
+                    count++;
                 }
-                count++;
+
             }
         });
 
@@ -153,16 +178,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(7);
-                    checkcircle();
-                    box301.setImageResource(o);
-                } else {
-                    cross.add(7);
-                    checkcross();
-                    box301.setImageResource(x);
+                if (c7 == 0) {
+                    c7++;
+                    if (count % 2 == 0) {
+                        circle.add(7);
+                        checkcircle();
+                        box301.setImageResource(o);
+                    } else {
+                        cross.add(7);
+                        checkcross();
+                        box301.setImageResource(x);
+                    }
+                    count++;
                 }
-                count++;
+
             }
         });
 
@@ -170,16 +199,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(8);
-                    checkcircle();
-                    box302.setImageResource(o);
-                } else {
-                    cross.add(8);
-                    checkcross();
-                    box302.setImageResource(x);
+                if (c8 == 0) {
+                    c8++;
+                    if (count % 2 == 0) {
+                        circle.add(8);
+                        checkcircle();
+                        box302.setImageResource(o);
+                    } else {
+                        cross.add(8);
+                        checkcross();
+                        box302.setImageResource(x);
+                    }
+                    count++;
                 }
-                count++;
+
             }
         });
 
@@ -187,31 +220,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (count % 2 == 0) {
-                    circle.add(9);
-                    checkcircle();
-                    box303.setImageResource(o);
-                } else {
-                    cross.add(9);
-                    checkcross();
-                    box303.setImageResource(x);
+                if (c9 == 0) {
+                    c9++;
+                    if (count % 2 == 0) {
+                        circle.add(9);
+                        checkcircle();
+                        box303.setImageResource(o);
+                    } else {
+                        cross.add(9);
+                        checkcross();
+                        box303.setImageResource(x);
+                    }
+                    count++;
                 }
-                count++;
-            }
-        });
-        reset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                clear();
             }
         });
+
 
     }
 
     public void clear() {
 
         count = 1;
+
+        c1 = 0;
+        c2 = 0;
+        c3 = 0;
+        c4 = 0;
+        c5 = 0;
+        c6 = 0;
+        c7 = 0;
+        c8 = 0;
+        c9 = 0;
+
         cross.clear();
         circle.clear();
 
@@ -228,11 +270,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Wincross() {
-        Toast.makeText(this, "Cross Win", Toast.LENGTH_LONG).show();
+        Dialog dialog = new Dialog(MainActivity.this);
+        dialog.setContentView(R.layout.win_dialog);
+        dialog.setCancelable(false);
+
+        TextView win = dialog.findViewById(R.id.win);
+        CardView reset = dialog.findViewById(R.id.reset);
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                clear();
+                dialog.dismiss();
+            }
+        });
+
+
+        win.setText("Cross Win");
+        dialog.show();
     }
 
     public void Wincircle() {
-        Toast.makeText(this, "Circle Win", Toast.LENGTH_LONG).show();
+        Dialog dialog = new Dialog(MainActivity.this);
+        dialog.setContentView(R.layout.win_dialog);
+        dialog.setCancelable(false);
+
+        TextView win = dialog.findViewById(R.id.win);
+        CardView reset = dialog.findViewById(R.id.reset);
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                clear();
+                dialog.dismiss();
+            }
+        });
+
+        win.setText("Circle Win");
+
+        dialog.show();
     }
 
     public void checkcross() {
