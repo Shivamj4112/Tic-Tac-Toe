@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView box101, box102, box103;
     ImageView box201, box202, box203;
     ImageView box301, box302, box303;
+    CardView reset;
 
     List<Integer> cross = new ArrayList<>();
     List<Integer> circle = new ArrayList<>();
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        reset = findViewById(R.id.reset);
+
         box101 = findViewById(R.id.box101);
         box102 = findViewById(R.id.box102);
         box103 = findViewById(R.id.box103);
@@ -45,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
         box301 = findViewById(R.id.box301);
         box302 = findViewById(R.id.box302);
         box303 = findViewById(R.id.box303);
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                clear();
+            }
+        });
 
         box101.setOnClickListener(new View.OnClickListener() {
             @Override
